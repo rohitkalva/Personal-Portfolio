@@ -12,4 +12,11 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  ToggleNavBar(): void {
+    const element: HTMLElement = document.getElementsByClassName( 'navbar-toggler' )[ 0 ] as HTMLElement;
+    if ( element.getAttribute( 'aria-expanded' ) === 'true' ) {
+        element.click();
+    }
+}
+
 }
